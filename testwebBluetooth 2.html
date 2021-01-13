@@ -108,6 +108,7 @@ var url = window.location.href
         var pair = vars[i].split('=')
         params[pair[0]] = decodeURIComponent(pair[1])
       }
+      document.getElementById("params").innerHTML = params;
       console.log("params ===>", params)
       return params
     }
@@ -135,6 +136,7 @@ var url = window.location.href
 <br/><input type="text" id="write_characteristic" placeholder="กรอกข้อมูล" style="width: 50%; color: black; padding: 14px 20px; margin: 8px 0; border: 1px solid black; border-radius: 4px;">
 <h1> <a href="javascript:writeCharacteristic();">write</a> </h1> <br/>
 <br /><button onclick="getParams();">get token</button>
+<span id="params"></span>
 
 </body>
 </html>
